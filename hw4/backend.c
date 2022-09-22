@@ -24,9 +24,46 @@ void init()
 
 void add(char *name, char *number)
 {
-  printf("add() was not implemented.\n");
-  // Error Message for overflow:
-  // printf("Can't add.  The address book is full!\n");
+    struct record *newNode = new_node();
+
+    if(newNode == NULL){
+        printf("Can't add.  The address book is full!\n");
+        return;
+    }
+
+    strcpy(newNode->name, name);
+    strcpy(newNode->number, number);
+
+    if (data == NULL) // if address book is empty
+    {
+        data = newNode;
+        data->next = NULL;
+    }
+    else if(compare(data->name,newNode)>=0) // add at first
+    {
+        newNode->next = data;
+        data = newNode;
+    }
+    else 
+    {
+        struct record *pv = data;
+        struct record *cur = data;
+        while(cur != NULL && compare(cur->name,newNode)<0)
+        {
+            pv = cur;
+            cur = cur->next;
+        }
+        if(cur == NULL) // add at last position
+        {
+            pv->next = newNode;
+            newNode->next = NULL;
+        }
+        else // add at middle
+        {
+        newNode->next = cur;
+        pv->next = newNode;
+        }
+    }
 }
 
 
@@ -50,9 +87,28 @@ void search(char name[3])
 
 void delete(char name[3])
 {
-  printf("delete() is not implemented.\n");
-  // Error Message:
-  // printf("Couldn't find the name.\n");
+  struct record *r=data;
+    int result;
+    if(compare(name,data) == 0){
+        data = data->next;
+        free_node(r);
+        printf("The name was deleted.\n");
+    }
+    else
+    {
+        while (r != NULL && (result = compare(name, r->next)) != 0)
+            r = r->next;
+
+        if (r == NULL)
+            printf("Couldn't find the name.\n");
+        else
+        {
+            struct record *t = r->next;
+            r->next = t->next;
+            free_node(t);
+            printf("The name was deleted.\n");
+        }
+    }
 }
 
 
@@ -90,6 +146,14 @@ void print_data(char * s, int n)
 
 void print_list()
 {
-  printf("print_list() was not implemented.\n");
+  struct record * r = data;
+    while (r != NULL)
+    {
+        print_name(r);
+        printf(" : ");
+        print_number(r);
+        printf("\n");
+        r = r->next;
+    }
 }
 

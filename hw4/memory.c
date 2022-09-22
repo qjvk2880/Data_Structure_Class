@@ -25,9 +25,14 @@ void init_pool() // Initialize the pool
 // Gets a node from the pool. Returns NULL if pool is empty. (A BETTER DESIGN)
 struct record * new_node()  
 {
-  printf("new_node() was not implemented.\n");
+  struct record *p;
+  if(top==NULL){
+    return NULL;
+  }
+  p = top;
+  top = p->next;
+  return p;
 }
-
 
 // Push a node to the pool.
 void free_node(struct record *r)
