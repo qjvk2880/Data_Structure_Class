@@ -1,0 +1,64 @@
+Welcome to Address Book!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> abc : 1111
+abc : 1234
+bbb : 2222
+ccc : 3333
+ADDR> SEARCH NAME>> Couldn't find the name.
+ADDR> SEARCH NAME>> bbb : 2222 was found.
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> aaa : 1111
+aab : 1122
+abc : 1111
+abc : 1234
+bbb : 2222
+ccc : 3333
+ddd : 4444
+ADDR> The Address Book BST's height is 3.
+ADDR> DELETE NAME>> The name was deleted.
+ADDR> aaa : 1111
+aab : 1122
+abc : 1111
+abc : 1234
+ccc : 3333
+ddd : 4444
+ADDR> The Address Book BST's height is 3.
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> Please type a command.
+ADDR> Please type a command.
+ADDR> ADD NAME>> ENTER NUMBER>>> Can't add.  The pool is empty!
+ADDR> ADD NAME>> ENTER NUMBER>>> Can't add.  The pool is empty!
+ADDR> ADD NAME>> ENTER NUMBER>>> Can't add.  The pool is empty!
+ADDR> DELETE NAME>> Couldn't find the name.
+ADDR> DELETE NAME>> The name was deleted.
+ADDR> aaa : 1111
+aab : 1122
+abc : 1111
+abc : 1234
+ccc : 3333
+hhh : 1111
+hhi : 1111
+hhj : 1111
+hhk : 1111
+ADDR> The Address Book BST's height is 4.
+ADDR> ADD NAME>> ENTER NUMBER>>> The name was successfully added!
+ADDR> aaa : 1111
+aab : 1122
+abc : 1111
+abc : 1234
+ccc : 3333
+hha : 1111
+hhh : 1111
+hhi : 1111
+hhj : 1111
+hhk : 1111
+ADDR> The Address Book BST's height is 4.
+ADDR> Quitting ... 
